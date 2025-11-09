@@ -1,0 +1,188 @@
+"use client"
+import React, { useEffect, useRef } from 'react';
+
+const ContactModal = ({ isOpen, onClose }) => {
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+
+        const handleEscapeKey = (event) => {
+            if (event.key === 'Escape') {
+                onClose();
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('keydown', handleEscapeKey);
+            document.body.style.overflow = 'hidden';
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen, onClose]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted');
+        onClose();
+    };
+
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-2 sm:p-4">
+            {/* Scrollable container for small screens */}
+            <div className="max-h-[90vh] w-full max-w-md mx-auto overflow-y-auto">
+                <div 
+                    ref={modalRef}
+                    className="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full mx-auto transform transition-all duration-300 scale-100 border border-yellow-200"
+                >
+                    {/* Header with close button */}
+                    <div className="flex justify-between items-center p-4 sm:p-6 border-b border-yellow-100 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-t-xl sm:rounded-t-2xl">
+                        <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
+                            Start Your Journey
+                        </h2>
+                        <button
+                            onClick={onClose}
+                            className="text-gray-500 hover:text-yellow-700 transition-colors duration-200 p-1 sm:p-2 rounded-full hover:bg-yellow-100 flex-shrink-0"
+                        >
+                            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    {/* Logo and Tagline Section */}
+                    <div className="text-center py-6 sm:py-8 bg-gradient-to-b from-white to-yellow-50/30">
+                        {/* Logo */}
+                        <div className="flex justify-center mb-4">
+                            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-lg flex items-center justify-center border border-yellow-200">
+                                <img
+                                    src="/Logo.png"
+                                    alt="ALTABB Wealth Logo"
+                                    width={80}
+                                    height={80}
+                                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                                />
+                            </div>
+                        </div>
+                        
+                        {/* Tagline */}
+                        <div className="space-y-2">
+                            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-700">
+                                ALTABB WEALTH
+                            </h3>
+                            <p className="text-sm sm:text-base text-gray-600 font-medium italic">
+                                Building Wealth, Creating Legacy.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Form */}
+                    <form onSubmit={handleSubmit} className="px-4 sm:px-6 pb-6 sm:pb-8 space-y-4 sm:space-y-5 bg-white rounded-b-xl sm:rounded-b-2xl">
+                        {/* Form Header */}
+                        <div className="text-center pt-2">
+                            <h4 className="text-lg sm:text-xl font-semibold text-gray-800">
+                                Get Your Free Consultation
+                            </h4>
+                            <p className="text-sm text-gray-500 mt-1">
+                                Fill the form below and we'll get back to you within 24 hours
+                            </p>
+                        </div>
+
+                        <div className="space-y-4 sm:space-y-5">
+                            <div>
+                                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Full Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    required
+                                    className="w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white shadow-sm"
+                                    placeholder="Enter your full name"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    required
+                                    className="w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white shadow-sm"
+                                    placeholder="Enter your email address"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    className="w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white shadow-sm"
+                                    placeholder="Enter your phone number"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Service Interested In
+                                </label>
+                                <select
+                                    id="service"
+                                    className="w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white shadow-sm"
+                                >
+                                    <option value="">Select a service</option>
+                                    <option value="accounting">Accounting & Bookkeeping</option>
+                                    <option value="cfo">CFO Advisory Services</option>
+                                    <option value="tax">Business Tax Services</option>
+                                    <option value="financial-planning">Financial Planning & Analysis</option>
+                                    <option value="mergers">Mergers & Acquisitions</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    rows={3}
+                                    className="w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white shadow-sm resize-none"
+                                    placeholder="Tell us about your financial goals and requirements..."
+                                />
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-yellow-600 to-amber-600 text-white py-4 rounded-lg font-bold text-sm sm:text-base hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] mt-2"
+                        >
+                            Get Free Consultation
+                        </button>
+
+                        <p className="text-xs text-gray-500 text-center px-2 pt-2 border-t border-gray-100 mt-4">
+                            By submitting this form, you agree to our Privacy Policy and Terms of Service.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ContactModal;
