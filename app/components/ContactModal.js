@@ -48,7 +48,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 >
                     {/* Header with close button */}
                     <div className="flex justify-between items-center p-4 sm:p-6 border-b border-yellow-100 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-t-xl sm:rounded-t-2xl">
-                        <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
+                        <h2 className="text-lg ml-20 sm:text-2xl font-bold text-gray-800">
                             Start Your Journey
                         </h2>
                         <button
@@ -65,7 +65,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     <div className="text-center py-6 sm:py-8 bg-gradient-to-b from-white to-yellow-50/30">
                         {/* Logo */}
                         <div className="flex justify-center mb-4">
-                            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-lg flex items-center justify-center border border-yellow-200">
+                            <div className="w-20 h-20 sm:w-24 sm:h-24   flex items-center justify-center ">
                                 <img
                                     src="/Logo.png"
                                     alt="ALTABB Wealth Logo"

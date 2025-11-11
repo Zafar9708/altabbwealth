@@ -2,23 +2,43 @@ const WhyChooseUs = () => {
   const features = [
     {
       number: "01",
-      title: "Proven Track Record",
-      description: "15+ years of delivering exceptional financial results and building lasting client relationships."
+      title: "Trust & Integrity",
+      description: "Every transaction is handled with honesty and transparency. Foundation of every client relationship."
     },
     {
-      number: "02",
-      title: "Substantial Assets Managed",
-      description: "Trusted with over $2 billion in assets, demonstrating our capability and reliability in wealth management."
+      number: "02", 
+      title: "End-to-End Solutions",
+      description: "From pay-in to pay-out — complete financial coverage for all your business needs."
     },
     {
       number: "03",
-      title: "Extensive Client Success",
-      description: "500+ clients have achieved their financial goals through our tailored strategies and expert guidance."
+      title: "Technology-Driven Excellence", 
+      description: "Automation enhances accuracy and reduces errors. Embracing technology for superior service."
     },
     {
       number: "04",
-      title: "Certified Expertise",
-      description: "Our team comprises SEC-registered advisors and certified professionals with deep financial expertise."
+      title: "Expertise You Can Rely On",
+      description: "Professionals dedicated to your success with reliable data and precise reporting."
+    },
+    {
+      number: "05",
+      title: "Compliance First",
+      description: "Ensure your business meets all regulatory obligations with our expert guidance."
+    },
+    {
+      number: "06",
+      title: "Risk Mitigation & Strategic Guidance",
+      description: "Early issue detection and actionable insights to protect and grow your business."
+    },
+    {
+      number: "07",
+      title: "Confidential & Reliable",
+      description: "We uphold the highest standards of discretion, protecting your sensitive financial information."
+    },
+    {
+      number: "08",
+      title: "Continuous Improvement",
+      description: "Embracing technology and best practices for superior service delivery and results."
     }
   ];
 
@@ -35,16 +55,15 @@ const WhyChooseUs = () => {
           <div className="flex justify-center items-center space-x-4 mb-6">
             <div className="w-16 h-px bg-brand-gold"></div>
             <span className="text-brand-gold font-semibold text-sm uppercase tracking-widest">
-              Our Commitment
+              Why Choose Us
             </span>
             <div className="w-16 h-px bg-brand-gold"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-text mb-6">
-            Building Your Financial Future
+            Integrity. Accuracy. Innovation. Precision. Expertise. Trust.
           </h2>
           <p className="text-xl text-brand-text/80 leading-relaxed">
-            We combine deep expertise with personalized strategies to create sustainable wealth 
-            and lasting legacies for our clients.
+            We don't just manage numbers — we manage trust, transparency, and transformation.
           </p>
         </div>
 
@@ -82,29 +101,38 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* Bottom Stats */}
+        {/* Client Promise Section */}
         <div 
           className="mt-16 pt-12 border-t border-brand-gold/20"
           data-aos="zoom-in-up"
           data-aos-duration="800"
           data-aos-delay="400"
         >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-brand-text mb-4">Client Promise</h3>
+            <div className="w-16 h-1 bg-brand-gold mx-auto mb-6"></div>
+            <p className="text-xl text-brand-text/80 leading-relaxed max-w-3xl mx-auto">
+              Our commitment is to deliver timely, compliant, and growth-oriented results aligned with your business goals.
+            </p>
+          </div>
+          
+          {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-brand-gold mb-2">27%</div>
-              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Avg Annual Growth</div>
+              <div className="text-3xl font-bold text-brand-gold mb-2">200+</div>
+              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Clients Served</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-brand-text mb-2">99%</div>
-              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Client Retention</div>
+              <div className="text-3xl font-bold text-brand-gold mb-2">100%</div>
+              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Confidential</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-brand-gold mb-2">24/7</div>
               <div className="text-brand-text/60 text-sm uppercase tracking-wide">Support</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-brand-text mb-2">100%</div>
-              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Confidential</div>
+              <div className="text-3xl font-bold text-brand-gold mb-2">10+</div>
+              <div className="text-brand-text/60 text-sm uppercase tracking-wide">Years Experience</div>
             </div>
           </div>
         </div>

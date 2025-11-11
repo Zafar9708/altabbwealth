@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import ContactModal from "./components/ContactModal";
 import ChatWidget from "./components/ChatWidget";
+import AboutUs from './components/AboutUs';
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +56,7 @@ export default function Home() {
             <div className={isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}>
                 <Navbar />
                 <HeroSection />
+                <AboutUs />
                 <MissionVision />
                 <ServicesOverview />
                 <WhyChooseUs />

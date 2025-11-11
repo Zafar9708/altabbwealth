@@ -1,5 +1,6 @@
 
 
+
 // "use client"
 // import Link from 'next/link';
 // import React, { useState, useEffect, useRef } from 'react';
@@ -9,6 +10,7 @@
 //     const [scrolled, setScrolled] = useState(false);
 //     const [servicesHover, setServicesHover] = useState(false);
 //     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+//     const [selectedCountry, setSelectedCountry] = useState('India');
 //     const dropdownRef = useRef(null);
 
 //     useEffect(() => {
@@ -22,11 +24,9 @@
 //         }
 //     }, []);
 
-
-
 //     const services = [
 //         {
-//             title: "Accounting & Bookkeeping",
+//             title: "Finance",
 //             description: "Accurate, compliant financial operations",
 //             link: "/services/accounting"
 //         },
@@ -49,7 +49,24 @@
 //             title: "Mergers & Acquisitions",
 //             description: "Business growth partnerships",
 //             link: "/services/mergers-acquisitions"
+//         },
+//         {
+//             title: "Comprehensive Audit & Legal Oversight",
+//             description: "Business growth partnerships",
+//             link: "/services/mergers-acquisitions"
 //         }
+        
+//     ];
+
+//     const countries = [
+//         'India',
+//         'United States',
+//         'United Kingdom',
+//         'Canada',
+//         'Australia',
+//         'Germany',
+//         'France',
+//         'UAE'
 //     ];
 
 //     const closeMobileMenu = () => {
@@ -65,7 +82,7 @@
 //                 }`}>
 //                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 //                     <div className="flex justify-between items-center h-20">
-//                         {/* Logo - Left Side (using <img> instead of Next.js <Image>) */}
+//                         {/* Logo - Left Side */}
 //                         <div className="w-20 h-20 ml-12 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 overflow-hidden">
 //                             <Link href="/" className="flex items-center justify-center">
 //                                 <img
@@ -78,14 +95,11 @@
 //                             </Link>
 //                         </div>
 
-
 //                         {/* Centered Navigation - Desktop */}
 //                         <div className="hidden lg:flex items-center space-x-12">
 //                             <a href="/" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
 //                                 Home
 //                             </a>
-
-
 //                             <a href="/about" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
 //                                 About
 //                             </a>
@@ -99,10 +113,14 @@
 //                             >
 //                                 <button className="flex items-center space-x-2 text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
 //                                     <span>Services</span>
-//                                     {/* Changed icon to a colon (:) and removed rotation */}
-//                                     <span className={`text-brand-text mb-1 text-bold transition-transform duration-200`}>
-//                                         :
-//                                     </span>
+//                                     <svg 
+//                                         className={`w-4 h-4 transition-transform duration-200 ${servicesHover ? 'rotate-180' : ''}`}
+//                                         fill="none" 
+//                                         stroke="currentColor" 
+//                                         viewBox="0 0 24 24"
+//                                     >
+//                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+//                                     </svg>
 //                                 </button>
 //                             </div>
 
@@ -114,11 +132,12 @@
 //                             </a>
 //                         </div>
 
-//                         {/* CTA Button - Right Side */}
-//                         <div className="hidden lg:block">
+//                         {/* Right Side - CTA Button */}
+//                         <div className="hidden lg:flex items-center space-x-6">
+//                             {/* CTA Button */}
 //                             <a href="/get-started">
-//                                 <button className="bg-brand-text text-brand-background px-8 py-3 rounded-lg font-semibold hover:bg-brand-gold transition-all duration-300 shadow-lg hover:shadow-xl">
-//                                     Start Your Legacy
+//                                 <button className="bg-brand-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-brand-gold">
+//                                    Get Expert Advice
 //                                 </button>
 //                             </a>
 //                         </div>
@@ -141,7 +160,7 @@
 //                     </div>
 //                 </div>
 
-//                 {/* Services Mega Dropdown - Desktop (Retains Card Structure and uses brand-background) */}
+//                 {/* Services Mega Dropdown - Desktop */}
 //                 {servicesHover && (
 //                     <div
 //                         className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-brand-gold/20 z-40"
@@ -153,7 +172,7 @@
 //                                 {services.map((service, index) => (
 //                                     <div key={index} className="group">
 //                                         <a
-//                                             href={service.link} // Changed from <Link>
+//                                             href={service.link}
 //                                             className="block p-2 hover:bg-brand-background/50 rounded-lg transition-all duration-300 group-hover:translate-x-1"
 //                                         >
 //                                             <h3 className="text-brand-text text-sm font-bold mb-2 group-hover:text-brand-gold transition-colors duration-300">
@@ -183,8 +202,24 @@
 //                         {/* Scrollable Container */}
 //                         <div className="h-full overflow-y-auto pb-20">
 //                             <div className="px-6 py-8 space-y-6">
+//                                 {/* Country Selector - Mobile */}
+//                                 {/* <div className="border-b border-gray-100 pb-4">
+//                                     <label className="block text-brand-text font-semibold text-lg mb-3">Select Country</label>
+//                                     <select 
+//                                         value={selectedCountry}
+//                                         onChange={(e) => setSelectedCountry(e.target.value)}
+//                                         className="w-full bg-transparent border border-brand-gold/30 rounded-lg px-4 py-3 text-brand-text text-base focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold"
+//                                     >
+//                                         {countries.map((country) => (
+//                                             <option key={country} value={country} className="bg-brand-background text-brand-text">
+//                                                 {country}
+//                                             </option>
+//                                         ))}
+//                                     </select>
+//                                 </div> */}
+
 //                                 <a
-//                                     href="/" // Changed from <Link>
+//                                     href="/"
 //                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
 //                                     onClick={closeMobileMenu}
 //                                 >
@@ -192,7 +227,7 @@
 //                                 </a>
 
 //                                 <a
-//                                     href="/about" // Changed from <Link>
+//                                     href="/about"
 //                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
 //                                     onClick={closeMobileMenu}
 //                                 >
@@ -206,27 +241,28 @@
 //                                         className="flex items-center justify-between w-full py-4 text-brand-text font-semibold text-xl hover:text-brand-gold transition-colors duration-200"
 //                                     >
 //                                         <span>Services</span>
-//                                         {/* Changed icon to a colon (:) and removed rotation */}
-//                                         <span className={`text-brand-gold text-2xl transition-transform duration-200`}>
-//                                             :
-//                                         </span>
+//                                         <svg 
+//                                             className={`w-5 h-5 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+//                                             fill="none" 
+//                                             stroke="currentColor" 
+//                                             viewBox="0 0 24 24"
+//                                         >
+//                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+//                                         </svg>
 //                                     </button>
 
-//                                     {/* Mobile Services Dropdown - TITLES ONLY, brand-background, and vertical line */}
+//                                     {/* Mobile Services Dropdown */}
 //                                     <div className={`transition-all duration-300 overflow-hidden ${mobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
 //                                         }`}>
-//                                         {/* Applying background color here */}
 //                                         <div className="py-4 pl-4 bg-brand-background">
-//                                             {/* Applying vertical line here */}
 //                                             <div className="space-y-1 py-2 border-l-4 border-brand-gold">
 //                                                 {services.map((service, index) => (
-//                                                     <a // Changed from <Link>
+//                                                     <a
 //                                                         key={index}
 //                                                         href={service.link}
 //                                                         className="block py-2 px-3 text-brand-text text-lg font-medium transition-colors duration-200 hover:bg-brand-gold/10 rounded-lg"
 //                                                         onClick={closeMobileMenu}
 //                                                     >
-//                                                         {/* Only the title is displayed */}
 //                                                         {service.title}
 //                                                     </a>
 //                                                 ))}
@@ -235,16 +271,15 @@
 //                                     </div>
 //                                 </div>
 
-
 //                                 <a
-//                                     href="/insights" // Changed from <Link>
+//                                     href="/insights"
 //                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
 //                                     onClick={closeMobileMenu}
 //                                 >
 //                                     Insights
 //                                 </a>
 //                                 <a
-//                                     href="/contact" // Changed from <Link>
+//                                     href="/contact"
 //                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
 //                                     onClick={closeMobileMenu}
 //                                 >
@@ -253,10 +288,10 @@
 
 //                                 <a href="/get-started">
 //                                     <button
-//                                         className="w-full bg-brand-text text-brand-background py-5 rounded-xl font-semibold text-xl mt-8 shadow-lg hover:bg-brand-gold transition-colors duration-300"
+//                                         className="w-full bg-brand-gold text-white py-5 rounded-xl font-semibold text-xl mt-8 shadow-lg hover:bg-brand-gold/90 transition-colors duration-300"
 //                                         onClick={closeMobileMenu}
 //                                     >
-//                                         Start Your Legacy
+//                                         Get Expert Advice
 //                                     </button>
 //                                 </a>
 //                             </div>
@@ -272,6 +307,7 @@
 // };
 
 // export default Navbar;
+
 
 "use client"
 import Link from 'next/link';
@@ -298,7 +334,7 @@ const Navbar = () => {
 
     const services = [
         {
-            title: "Accounting & Bookkeeping",
+            title: "Finance",
             description: "Accurate, compliant financial operations",
             link: "/services/accounting"
         },
@@ -321,7 +357,13 @@ const Navbar = () => {
             title: "Mergers & Acquisitions",
             description: "Business growth partnerships",
             link: "/services/mergers-acquisitions"
+        },
+        {
+            title: "Comprehensive Audit & Legal Oversight",
+            description: "Complete audit and legal compliance framework",
+            link: "/services/audit-legal"
         }
+        
     ];
 
     const countries = [
@@ -379,9 +421,14 @@ const Navbar = () => {
                             >
                                 <button className="flex items-center space-x-2 text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
                                     <span>Services</span>
-                                    <span className={`text-brand-text mb-1 text-bold transition-transform duration-200`}>
-                                        :
-                                    </span>
+                                    <svg 
+                                        className={`w-4 h-4 transition-transform duration-200 ${servicesHover ? 'rotate-180' : ''}`}
+                                        fill="none" 
+                                        stroke="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
                                 </button>
                             </div>
 
@@ -393,19 +440,15 @@ const Navbar = () => {
                             </a>
                         </div>
 
-                        {/* Right Side - Country Selector and CTA Button */}
+                        {/* Right Side - CTA Button */}
                         <div className="hidden lg:flex items-center space-x-6">
-                            {/* Country Selector */}
-                            
-
                             {/* CTA Button */}
                             <a href="/get-started">
                                 <button className="bg-brand-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-brand-gold">
-                                    Start Your Legacy
+                                   Get Expert Advice
                                 </button>
                             </a>
                         </div>
-                        
 
                         {/* Mobile menu button */}
                         <div className="lg:hidden">
@@ -433,14 +476,14 @@ const Navbar = () => {
                         onMouseLeave={() => setServicesHover(false)}
                     >
                         <div className="max-w-7xl mx-auto px-6 py-8">
-                            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                            <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
                                 {services.map((service, index) => (
                                     <div key={index} className="group">
                                         <a
                                             href={service.link}
-                                            className="block p-2 hover:bg-brand-background/50 rounded-lg transition-all duration-300 group-hover:translate-x-1"
+                                            className="block p-3 hover:bg-brand-background/50 rounded-lg transition-all duration-300 group-hover:translate-x-1"
                                         >
-                                            <h3 className="text-brand-text text-sm font-bold mb-2 group-hover:text-brand-gold transition-colors duration-300">
+                                            <h3 className="text-brand-text text-sm font-bold mb-2 group-hover:text-brand-gold transition-colors duration-300 leading-tight">
                                                 {service.title}
                                             </h3>
                                             <p className="text-brand-text/70 text-xs mb-3 leading-relaxed">
@@ -468,7 +511,7 @@ const Navbar = () => {
                         <div className="h-full overflow-y-auto pb-20">
                             <div className="px-6 py-8 space-y-6">
                                 {/* Country Selector - Mobile */}
-                                <div className="border-b border-gray-100 pb-4">
+                                {/* <div className="border-b border-gray-100 pb-4">
                                     <label className="block text-brand-text font-semibold text-lg mb-3">Select Country</label>
                                     <select 
                                         value={selectedCountry}
@@ -481,7 +524,7 @@ const Navbar = () => {
                                             </option>
                                         ))}
                                     </select>
-                                </div>
+                                </div> */}
 
                                 <a
                                     href="/"
@@ -506,13 +549,18 @@ const Navbar = () => {
                                         className="flex items-center justify-between w-full py-4 text-brand-text font-semibold text-xl hover:text-brand-gold transition-colors duration-200"
                                     >
                                         <span>Services</span>
-                                        <span className={`text-brand-gold text-2xl transition-transform duration-200`}>
-                                            :
-                                        </span>
+                                        <svg 
+                                            className={`w-5 h-5 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
                                     </button>
 
                                     {/* Mobile Services Dropdown */}
-                                    <div className={`transition-all duration-300 overflow-hidden ${mobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                                    <div className={`transition-all duration-300 overflow-hidden ${mobileServicesOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
                                         }`}>
                                         <div className="py-4 pl-4 bg-brand-background">
                                             <div className="space-y-1 py-2 border-l-4 border-brand-gold">
@@ -551,7 +599,7 @@ const Navbar = () => {
                                         className="w-full bg-brand-gold text-white py-5 rounded-xl font-semibold text-xl mt-8 shadow-lg hover:bg-brand-gold/90 transition-colors duration-300"
                                         onClick={closeMobileMenu}
                                     >
-                                        Start Your Legacy
+                                        Get Expert Advice
                                     </button>
                                 </a>
                             </div>

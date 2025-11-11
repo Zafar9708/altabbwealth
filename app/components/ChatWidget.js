@@ -135,14 +135,14 @@ const ChatWidget = () => {
                     <div className="bg-gradient-to-r from-yellow-600 to-amber-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
                         <div className="flex items-center space-x-3">
                             <div className="relative">
-                                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <div className="w-10 h-10  flex items-center justify-center">
                                     <img
                                         src="/Logo.png"
                                         alt="ALTABB Wealth"
                                         className="w-8 h-8 object-contain"
                                     />
                                 </div>
-                                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+                                
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm">ALTABB Wealth</h3>

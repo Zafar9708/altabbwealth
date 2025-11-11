@@ -1,104 +1,177 @@
-// "use client"
-// import { useState, useEffect } from 'react';
-// import Link from 'next/link';
 
-// const HeroSection = () => {
+
+// "use client"
+// import React, { useState, useEffect } from 'react';
+
+// const customStyles = `
+//   @keyframes fadeInSlideUp {
+//     from {
+//       opacity: 0;
+//       transform: translateY(15px);
+//     }
+//     to {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+
+//   .animate-fadeInSlideUp {
+//     animation: fadeInSlideUp 0.10s ease-out forwards;
+//   }
+// `;
+
+// const MinimalistHeroSection = () => {
 //   const [currentSlide, setCurrentSlide] = useState(0);
 
+//   // Updated slides data with new content
 //   const slides = [
 //     {
-//       title: "Building Wealth",
-//       subtitle: "Creating Legacy",
-//       description: "Comprehensive financial solutions to grow your wealth and secure your legacy.",
-//       cta: "Start Building"
+//       title: "The Future of Finance, Today",
+//       subtitle: "From Pay-In to Pay-Out — We've Got You Covered",
+//       description: "At Altabb Wealth, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
+//       cta: "Get Started"
 //     },
 //     {
-//       title: "Strategic Financial Leadership",
-//       subtitle: "Driving Business Excellence", 
-//       description: "Expert CFO advisory to optimize operations and drive sustainable growth.",
-//       cta: "Get Expert Advice"
+//       title: "Finance That Moves as Fast as You Do",
+//       subtitle: "Real-Time Solutions for Dynamic Businesses",
+//       description: "Experience financial services designed for the modern pace of business. Our agile platforms and responsive advisory teams ensure your financial operations keep up with your ambition, providing instant insights and rapid execution when you need it most.",
+//       cta: "Accelerate Growth"
 //     },
 //     {
-//       title: "Legacy Planning", 
-//       subtitle: "Multi-Generational Impact",
-//       description: "Secure your family's future with comprehensive estate planning strategies.",
-//       cta: "Plan Your Legacy"
+//       title: "Where Tech Meets Trust in Finance",
+//       subtitle: "Innovation Backed by Integrity",
+//       description: "Leveraging cutting-edge technology while maintaining the highest standards of financial stewardship. Our AI-driven insights, automated workflows, and secure platforms work seamlessly with human expertise to deliver results you can trust.",
+//       cta: "Discover How"
 //     }
 //   ];
 
+//   // Auto-slide functionality
 //   useEffect(() => {
 //     const interval = setInterval(() => {
 //       setCurrentSlide((prev) => (prev + 1) % slides.length);
-//     }, 6000);
+//     }, 4000);
 //     return () => clearInterval(interval);
-//   }, []);
+//   }, [slides.length]);
+
+//   const slide = slides[currentSlide];
+
+//   // Function to handle dot clicks
+//   const handleDotClick = (index) => {
+//     // Only update if clicking a different dot
+//     if (index !== currentSlide) {
+//       setCurrentSlide(index);
+//     }
+//   };
 
 //   return (
-//     <section className="min-h-screen bg-white flex items-center pt-20">
-//       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
-        
-//         {/* Single Slide Display */}
-//         <div className="mb-16 min-h-96 flex items-center justify-center">
-//           <div className="space-y-8">
-//             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-brand-text leading-tight">
-//               {slides[currentSlide].title}
-//             </h1>
-//             <h2 className="text-4xl md:text-5xl text-brand-gold font-bold">
-//               {slides[currentSlide].subtitle}
+//     <section 
+//       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
+//       // Use pure white background
+//       style={{ fontFamily: 'Inter, sans-serif', backgroundColor: 'white' }}
+//     >
+//       {/* Custom Styles Injection */}
+//       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
+
+//       {/* Main Content Area */}
+//       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 flex-grow flex items-center justify-center py-8">
+//         <div className="text-center max-w-4xl w-full">
+          
+//           {/* Content Block (uses 'key' for forced re-render and enhanced transition) */}
+//           <div 
+//             key={currentSlide} 
+//             className="space-y-4 md:space-y-6 animate-fadeInSlideUp"
+//           >
+//             {/* Subtitle - Light and Gold (Reduced size for better hierarchy) */}
+//             <h2 
+//               className="text-xl sm:text-2xl lg:text-3xl font-light tracking-widest uppercase"
+//               style={{ color: '#C6A04A' /* brand-gold */ }}
+//             >
+//               {slide.subtitle}
 //             </h2>
-//             <p className="text-xl text-brand-text/80 leading-relaxed max-w-2xl mx-auto">
-//               {slides[currentSlide].description}
+            
+//             {/* Title - Bold Navy (Reduced size for elegance) */}
+//             <h1 
+//               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none"
+//               style={{ color: '#14274E' /* brand-text */ }}
+//             >
+//               {slide.title}
+//             </h1>
+
+//             {/* Description - Subdued Navy, slightly wider spacing */}
+//             <p 
+//               className="text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto pt-8"
+//               style={{ color: 'rgba(20, 39, 78, 0.7)' /* slightly muted brand-text */ }}
+//             >
+//               {slide.description}
 //             </p>
 //           </div>
-//         </div>
 
-//         {/* CTA Buttons */}
-//         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-//           <Link 
-//             href="/consultation" 
-//             className="bg-brand-text text-white px-12 py-4 rounded-lg font-semibold text-lg hover:bg-brand-gold transition-colors duration-300"
-//           >
-//             {slides[currentSlide].cta}
-//           </Link>
-//           <Link 
-//             href="/services" 
-//             className="border-2 border-brand-text text-brand-text px-12 py-4 rounded-lg font-semibold text-lg hover:bg-brand-text hover:text-white transition-colors duration-300"
-//           >
-//             Our Services
-//           </Link>
-//         </div>
+//           {/* CTA Buttons */}
+//           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16 mb-12">
+//             {/* Primary CTA Button: Gold Fill with subtle rounding */}
+//             <a
+//               href="/consultation"
+//               className="
+//                 inline-flex items-center justify-center px-10 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform
+//                 hover:scale-[1.03] hover:shadow-xl
+//               "
+//               style={{ backgroundColor: '#C6A04A', color: 'white', letterSpacing: '0.05em' /* brand-gold fill */ }}
+//             >
+//               {slide.cta}
+//             </a>
+            
+//             {/* Secondary CTA Button: Navy Outline - Subtle Ghost Style */}
+//             <a
+//               href="/service"
+//               className="
+//                 inline-flex items-center justify-center px-10 py-3 rounded-xl font-semibold text-lg border-2 transition-all duration-300 transform
+//                 hover:scale-[1.03] hover:bg-opacity-5
+//               "
+//               style={{ borderColor: '#14274E', color: '#14274E', letterSpacing: '0.05em' /* brand-text outline */ }}
+//             >
+//               Our Services
+//             </a>
+//           </div>
 
-//         {/* Simple Navigation Dots */}
-//         <div className="flex justify-center space-x-3">
-//           {slides.map((_, index) => (
-//             <button
-//               key={index}
-//               onClick={() => setCurrentSlide(index)}
-//               className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-//                 index === currentSlide 
-//                   ? 'bg-brand-gold' 
-//                   : 'bg-gray-300 hover:bg-gray-400'
-//               }`}
-//             />
-//           ))}
-//         </div>
+//           {/* Navigation Dots (Simplified and cleaner) */}
+//           <div className="flex justify-center space-x-3 pt-4">
+//             {slides.map((_, index) => (
+//               <button
+//                 key={index}
+//                 onClick={() => handleDotClick(index)}
+//                 aria-label={`Go to slide ${index + 1}`}
+//                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
+//                   index === currentSlide
+//                     ? 'scale-[1.5] opacity-100' // Gold active dot
+//                     : 'scale-100 opacity-30' // Muted inactive dot
+//                 }`}
+//                 style={{ backgroundColor: index === currentSlide ? '#C6A04A' : '#14274E' }}
+//               />
+//             ))}
+//           </div>
 
+//         </div>
 //       </div>
+      
 //     </section>
 //   );
 // };
 
-// export default HeroSection;
+// // Main App component wrapper
+// const App = () => {
+//   return (
+//     // Use pure white background
+//     <div style={{ minHeight: '100vh', backgroundColor: 'white' }}>
+//       <MinimalistHeroSection />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 "use client"
 import React, { useState, useEffect } from 'react';
 
-// NOTE: Since this must be a single, runnable file, we use standard anchor tags
-// instead of Next.js 'Link' components, and the main component is exported as 'App'.
-
-// --- Component Definition ---
-
-// Define custom animation keyframes for a smoother slide entry
 const customStyles = `
   @keyframes fadeInSlideUp {
     from {
@@ -112,32 +185,245 @@ const customStyles = `
   }
 
   .animate-fadeInSlideUp {
-    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation: fadeInSlideUp 0.10s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
   }
 `;
 
+const ConsultationForm = ({ isOpen, onClose, formType }) => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    serviceInterest: formType || 'general',
+    message: ''
+  });
+
+  const serviceOptions = [
+    { value: 'general', label: 'General Consultation' },
+    { value: 'accounting', label: 'Accounting & Bookkeeping' },
+    { value: 'cfo', label: 'CFO Advisory Services' },
+    { value: 'tax', label: 'Business Tax Services' },
+    { value: 'fpa', label: 'Financial Planning & Analysis' },
+    { value: 'ma', label: 'Mergers & Acquisitions' },
+    { value: 'audit', label: 'Audit & Legal Services' }
+  ];
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    alert('Thank you for your inquiry! We will contact you soon.');
+    onClose();
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 animate-fadeIn">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+        {/* Logo Header */}
+        <div className="flex justify-center pt-8 pb-4">
+          <div className="w-24 h-24 rounded-lg flex items-center justify-center">
+            <img
+              src="/Logo.png"
+              alt="ALTABB Wealth Logo"
+              width={80}
+              height={80}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Form Content */}
+        <div className="px-8 pb-8">
+          <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#14274E' }}>
+            Start Your Journey
+          </h2>
+          <p className="text-center text-gray-600 mb-6">
+            Let's discuss how we can help you {formType === 'accelerate' ? 'accelerate growth' : formType === 'discover' ? 'discover solutions' : 'get started'}
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300"
+                  placeholder="John"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300"
+                  placeholder="Doe"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                Email Address *
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300"
+                placeholder="john@company.com"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300"
+                placeholder="+1 (555) 000-0000"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                Company Name
+              </label>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300"
+                placeholder="Your Company"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                Service Interest
+              </label>
+              <select
+                name="serviceInterest"
+                value={formData.serviceInterest}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300 bg-white"
+              >
+                {serviceOptions.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#14274E' }}>
+                Message
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                rows="4"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors duration-300 resize-none"
+                placeholder="Tell us about your financial goals and challenges..."
+              ></textarea>
+            </div>
+
+            <div className="flex space-x-4 pt-4">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 px-6 py-3 border-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+                style={{ borderColor: '#14274E', color: '#14274E' }}
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 px-6 py-3 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: '#C6A04A' }}
+              >
+                Submit Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const MinimalistHeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [currentFormType, setCurrentFormType] = useState('general');
 
-  // Data is kept consistent from the original prompt
+  // Updated slides data with new content
   const slides = [
     {
-      title: "Building Wealth",
-      subtitle: "Creating Legacy",
-      description: "Comprehensive financial solutions to grow your wealth and secure your legacy, built on a foundation of trust and tailored strategy.",
-      cta: "Start Building"
+      title: "The Future of Finance, Today",
+      subtitle: "From Pay-In to Pay-Out — We've Got You Covered",
+      description: "At Altabb Wealth, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
+      cta: "Get Started",
+      formType: "general"
     },
     {
-      title: "Strategic Financial Leadership",
-      subtitle: "Driving Business Excellence",
-      description: "Expert CFO advisory services designed to optimize operations, enhance profitability, and drive sustainable corporate growth.",
-      cta: "Get Expert Advice"
+      title: "Finance That Moves as Fast as You Do",
+      subtitle: "Real-Time Solutions for Dynamic Businesses",
+      description: "Experience financial services designed for the modern pace of business. Our agile platforms and responsive advisory teams ensure your financial operations keep up with your ambition, providing instant insights and rapid execution when you need it most.",
+      cta: "Accelerate Growth",
+      formType: "accelerate"
     },
     {
-      title: "Generational Wealth Transfer",
-      subtitle: "Preserving Your Family's Future",
-      description: "Secure your family's financial future with comprehensive estate and multi-generational legacy planning strategies.",
-      cta: "Plan Your Legacy"
+      title: "Where Tech Meets Trust in Finance",
+      subtitle: "Innovation Backed by Integrity",
+      description: "Leveraging cutting-edge technology while maintaining the highest standards of financial stewardship. Our AI-driven insights, automated workflows, and secure platforms work seamlessly with human expertise to deliver results you can trust.",
+      cta: "Discover How",
+      formType: "discover"
     }
   ];
 
@@ -153,51 +439,64 @@ const MinimalistHeroSection = () => {
 
   // Function to handle dot clicks
   const handleDotClick = (index) => {
-    // Only update if clicking a different dot
     if (index !== currentSlide) {
       setCurrentSlide(index);
     }
   };
 
+  const handleCTAClick = (formType) => {
+    setCurrentFormType(formType);
+    setIsFormOpen(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsFormOpen(false);
+  };
 
   return (
     <section 
       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
-      // Use pure white background
       style={{ fontFamily: 'Inter, sans-serif', backgroundColor: 'white' }}
     >
       {/* Custom Styles Injection */}
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
+      {/* Consultation Form */}
+      <ConsultationForm 
+        isOpen={isFormOpen} 
+        onClose={handleCloseForm} 
+        formType={currentFormType}
+      />
+
       {/* Main Content Area */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 flex-grow flex items-center justify-center py-8">
         <div className="text-center max-w-4xl w-full">
           
-          {/* Content Block (uses 'key' for forced re-render and enhanced transition) */}
+          {/* Content Block */}
           <div 
             key={currentSlide} 
             className="space-y-4 md:space-y-6 animate-fadeInSlideUp"
           >
-            {/* Subtitle - Light and Gold (Reduced size for better hierarchy) */}
+            {/* Subtitle - Light and Gold */}
             <h2 
               className="text-xl sm:text-2xl lg:text-3xl font-light tracking-widest uppercase"
-              style={{ color: '#C6A04A' /* brand-gold */ }}
+              style={{ color: '#C6A04A' }}
             >
               {slide.subtitle}
             </h2>
             
-            {/* Title - Bold Navy (Reduced size for elegance) */}
+            {/* Title - Bold Navy */}
             <h1 
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none"
-              style={{ color: '#14274E' /* brand-text */ }}
+              style={{ color: '#14274E' }}
             >
               {slide.title}
             </h1>
 
-            {/* Description - Subdued Navy, slightly wider spacing */}
+            {/* Description - Subdued Navy */}
             <p 
               className="text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto pt-8"
-              style={{ color: 'rgba(20, 39, 78, 0.7)' /* slightly muted brand-text */ }}
+              style={{ color: 'rgba(20, 39, 78, 0.7)' }}
             >
               {slide.description}
             </p>
@@ -205,32 +504,32 @@ const MinimalistHeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16 mb-12">
-            {/* Primary CTA Button: Gold Fill with subtle rounding */}
-            <a
-              href="/consultation"
+            {/* Primary CTA Button */}
+            <button
+              onClick={() => handleCTAClick(slide.formType)}
               className="
                 inline-flex items-center justify-center px-10 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform
                 hover:scale-[1.03] hover:shadow-xl
               "
-              style={{ backgroundColor: '#C6A04A', color: 'white', letterSpacing: '0.05em' /* brand-gold fill */ }}
+              style={{ backgroundColor: '#C6A04A', color: 'white', letterSpacing: '0.05em' }}
             >
               {slide.cta}
-            </a>
+            </button>
             
-            {/* Secondary CTA Button: Navy Outline - Subtle Ghost Style */}
+            {/* Secondary CTA Button */}
             <a
-              href="/services"
+              href="/service"
               className="
                 inline-flex items-center justify-center px-10 py-3 rounded-xl font-semibold text-lg border-2 transition-all duration-300 transform
                 hover:scale-[1.03] hover:bg-opacity-5
               "
-              style={{ borderColor: '#14274E', color: '#14274E', letterSpacing: '0.05em' /* brand-text outline */ }}
+              style={{ borderColor: '#14274E', color: '#14274E', letterSpacing: '0.05em' }}
             >
               Our Services
             </a>
           </div>
 
-          {/* Navigation Dots (Simplified and cleaner) */}
+          {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 pt-4">
             {slides.map((_, index) => (
               <button
@@ -239,17 +538,15 @@ const MinimalistHeroSection = () => {
                 aria-label={`Go to slide ${index + 1}`}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? 'scale-[1.5] opacity-100' // Gold active dot
-                    : 'scale-100 opacity-30' // Muted inactive dot
+                    ? 'scale-[1.5] opacity-100'
+                    : 'scale-100 opacity-30'
                 }`}
                 style={{ backgroundColor: index === currentSlide ? '#C6A04A' : '#14274E' }}
               />
             ))}
           </div>
-
         </div>
       </div>
-      
     </section>
   );
 };
@@ -257,7 +554,6 @@ const MinimalistHeroSection = () => {
 // Main App component wrapper
 const App = () => {
   return (
-    // Use pure white background
     <div style={{ minHeight: '100vh', backgroundColor: 'white' }}>
       <MinimalistHeroSection />
     </div>
