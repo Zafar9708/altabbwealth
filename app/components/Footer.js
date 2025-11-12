@@ -1,14 +1,19 @@
+
+
+
 // import Link from "next/link";
 
 // const Footer = () => {
 //   const currentYear = new Date().getFullYear();
 
 //   const services = [
-//     "Accounting & Bookkeeping",
+//     "Finance",
 //     "CFO Advisory Services",
 //     "Business Tax Services",
 //     "Financial Planning & Analysis",
-//     "Mergers & Acquisitions"
+//     "Mergers & Acquisitions",
+//     "Comprehensive Audit and Legal Oversight"
+
 //   ];
 
 //   const company = [
@@ -20,10 +25,10 @@
 //   ];
 
 //   const contactInfo = {
-//     address: "Tower C, Business Bay, Mumbai 400013, India",
-//     phone: "+91 90000 00000",
-//     email: "contact@altabbwealth.com",
-//     website: "www.altabbwealth.co"
+//     address: "5204, ATS Rhapsody, Sector-1, Greater Noida, UP, 201306, India",
+//     phone: "+91 8505804836",
+//     email: "hi@altabb.com",
+//     website: "www.altabb.com"
 //   };
 
 //   const certifications = [
@@ -90,8 +95,7 @@
 //                 </div>
 //               </div>
 
-//               {/* Certifications */}
-//               <div>
+//               {/* <div>
 //                 <h4 className="text-white font-semibold mb-4">Certifications & Memberships</h4>
 //                 <div className="flex flex-wrap gap-2">
 //                   {certifications.map((cert, index) => (
@@ -100,7 +104,7 @@
 //                     </span>
 //                   ))}
 //                 </div>
-//               </div>
+//               </div> */}
 //             </div>
 
 //             {/* Services */}
@@ -199,18 +203,18 @@
 
 // export default Footer;
 
-
 import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    "Accounting & Bookkeeping",
+    "Finance",
     "CFO Advisory Services",
     "Business Tax Services",
     "Financial Planning & Analysis",
-    "Mergers & Acquisitions"
+    "Mergers & Acquisitions",
+    "Comprehensive Audit and Legal Oversight"
   ];
 
   const company = [
@@ -235,6 +239,9 @@ const Footer = () => {
     "ISO 9001:2015",
     "Fiduciary Standard"
   ];
+
+  // Encode the address for Google Maps URL
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactInfo.address)}`;
 
   return (
     <footer className="bg-brand-text text-white">
@@ -291,17 +298,6 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-
-              {/* <div>
-                <h4 className="text-white font-semibold mb-4">Certifications & Memberships</h4>
-                <div className="flex flex-wrap gap-2">
-                  {certifications.map((cert, index) => (
-                    <span key={index} className="bg-brand-gold/20 text-brand-gold text-xs px-3 py-1 rounded-full border border-brand-gold/30">
-                      {cert}
-                    </span>
-                  ))}
-                </div>
-              </div> */}
             </div>
 
             {/* Services */}
@@ -334,41 +330,59 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-bold mb-6">Contact Us</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 text-brand-gold mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
-                  <span className="text-white/70 text-sm">{contactInfo.address}</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                  </svg>
-                  <a href={`tel:${contactInfo.phone}`} className="text-white/70 hover:text-brand-gold transition-colors duration-300 text-sm">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                  <a href={`mailto:${contactInfo.email}`} className="text-white/70 hover:text-brand-gold transition-colors duration-300 text-sm">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"/>
-                  </svg>
-                  <a href={`https://${contactInfo.website}`} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-brand-gold transition-colors duration-300 text-sm">
-                    {contactInfo.website}
-                  </a>
-                </div>
-              </div>
-            </div>
+  <h3 className="text-lg font-bold mb-6">Contact Us</h3>
+  <div className="space-y-4">
+    <div className="flex items-start">
+      <a 
+        href={mapsUrl} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex items-start text-white/70 hover:text-brand-gold transition-colors duration-300"
+      >
+        <svg className="w-5 h-5 text-brand-gold mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span className="text-sm">{contactInfo.address}</span>
+      </a>
+    </div>
+    <div className="flex items-center">
+      <a 
+        href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} 
+        className="flex items-center text-white/70 hover:text-brand-gold transition-colors duration-300"
+      >
+        <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        <span className="text-sm">{contactInfo.phone}</span>
+      </a>
+    </div>
+    <div className="flex items-center">
+      <a 
+        href={`mailto:${contactInfo.email}`} 
+        className="flex items-center text-white/70 hover:text-brand-gold transition-colors duration-300"
+      >
+        <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        <span className="text-sm">{contactInfo.email}</span>
+      </a>
+    </div>
+    <div className="flex items-center">
+      <a 
+        href={`https://${contactInfo.website}`} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex items-center text-white/70 hover:text-brand-gold transition-colors duration-300"
+      >
+        <svg className="w-5 h-5 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"/>
+        </svg>
+        <span className="text-sm">{contactInfo.website}</span>
+      </a>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
