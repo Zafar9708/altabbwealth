@@ -290,9 +290,9 @@ const AboutUsContent = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Businesses Served' },
-    { number: '15+', label: 'Years Experience' },
-    { number: '98%', label: 'Client Satisfaction' },
+    { number: '200+', label: 'Businesses Served' },
+    { number: '10+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support' }
   ];
 
@@ -341,7 +341,7 @@ const AboutUsContent = () => {
                   Start Your Journey
                 </a>
                 <a
-                  href="/services"
+                  href="/service"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-lg border-2 transition-all duration-300 transform hover:scale-105"
                   style={{ borderColor: BRAND_COLORS.text, color: BRAND_COLORS.text }}
                 >
@@ -498,7 +498,7 @@ const AboutUsContent = () => {
                 Join hundreds of businesses that trust us with their financial management while they focus on growth and innovation.
               </p>
               <a
-                href="/consultation"
+                href="/contact"
                 className="inline-flex items-center justify-center w-full bg-brand-gold text-white py-4 px-6 rounded-xl font-semibold hover:bg-brand-gold/90 transition-colors duration-300"
               >
                 Schedule Free Consultation

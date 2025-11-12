@@ -391,7 +391,7 @@ const CountriesWeWorkWith = () => {
             <div className="text-brand-text/70 text-sm">Global Presence</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-brand-gold mb-2">500+</div>
+            <div className="text-3xl font-bold text-brand-gold mb-2">200+</div>
             <div className="text-brand-text font-semibold">Clients Served</div>
             <div className="text-brand-text/70 text-sm">Internationally</div>
           </div>

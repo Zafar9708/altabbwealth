@@ -218,7 +218,7 @@ const MissionVision = () => {
   return (
     <section className="min-h-screen bg-brand-background py-20 px-4 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 border-2 border-brand-gold/20 rounded-full"></div>
+      {/* <div className="absolute top-10 left-10 w-32 h-32 border-2 border-brand-gold/20 rounded-full"></div> */}
       <div className="absolute bottom-20 right-10 w-24 h-24 border border-brand-text/10 rounded-full"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-brand-gold/5 rounded-full"></div>
 
@@ -311,7 +311,7 @@ const MissionVision = () => {
               
               <div className="bg-gradient-to-br from-brand-text to-brand-text/90 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
                 {/* Shimmer Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-gold/10 to-transparent animate-pulse"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-gold/10 to-transparent animate-pulse"></div> */}
                 
                 <div className="relative z-10">
                   <h2 className="text-3xl font-bold text-white mb-6 relative">

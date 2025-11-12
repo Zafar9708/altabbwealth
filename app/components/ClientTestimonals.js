@@ -302,10 +302,10 @@ const ClientTestimonials = () => {
   ];
 
   const stats = [
-    { number: "98%", label: "Client Retention Rate" },
-    { number: "15+", label: "Years Average Experience" },
-    { number: "500+", label: "Businesses Served" },
-    { number: "$2.5B+", label: "Assets Under Management" }
+    { number: "99%", label: "Client Retention Rate" },
+    { number: "10+", label: "Years Average Experience" },
+    { number: "200+", label: "Businesses Served" },
+    // { number: "$2.5B+", label: "Assets Under Management" }
   ];
 
   return (
@@ -342,8 +342,8 @@ const ClientTestimonials = () => {
           data-aos-delay="200"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">
+            <div key={index} className="text-center ml-56">
+              <div className="text-3xl md:text-4xl  font-bold text-brand-gold mb-2">
                 {stat.number}
               </div>
               <div className="text-brand-text font-semibold text-sm md:text-base">
