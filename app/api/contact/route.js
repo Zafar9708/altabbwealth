@@ -191,7 +191,6 @@ export async function POST(request) {
   try {
     const { name, email, phone, service, message } = await request.json();
 
-    // Validate required fields
     if (!name || !email) {
       return NextResponse.json(
         { error: 'Name and email are required' },
@@ -199,7 +198,7 @@ export async function POST(request) {
       );
     }
 
-    // Safe date formatting (no SSR crash)
+    // Safe date formatting for SSR build
     const dateIST = new Date().toLocaleString('en-IN', {
       hour12: true,
       timeZone: 'Asia/Kolkata',
@@ -219,32 +218,30 @@ export async function POST(request) {
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
             .header { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 25px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f8fafc; padding: 25px; border-radius: 0 0 10px 10px; border: 1px solid #e2e8f0; }
-            .field { margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-            .label { font-weight: bold; color: #64748b; display: block; margin-bottom: 8px; font-size: 14px; }
-            .value { color: #1e293b; font-size: 16px; }
-            .footer { margin-top: 25px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; font-size: 12px; }
+            .content { background: #f8fafc; padding: 25px; border: 1px solid #e2e8f0; border-radius: 0 0 10px 10px; }
+            .field { margin-bottom: 15px; padding: 15px; background: white; border-left: 4px solid #f59e0b; border-radius: 8px; }
+            .label { font-weight: bold; color: #64748b; }
+            .footer { margin-top: 25px; padding-top: 20px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 12px; color: #666; }
           </style>
         </head>
         <body>
-          
+
           <div class="header">
-            <h1 style="margin: 0; font-size: 24px;">New Consultation Request</h1>
-            <p style="margin: 10px 0 0 0;">Website Contact Form</p>
+            <h1>New Consultation Request</h1>
+            <p>Website Contact Form</p>
           </div>
-          
+
           <div class="content">
-            <div class="field"><span class="label">👤 Client Name</span><span class="value">${name}</span></div>
-            <div class="field"><span class="label">📧 Email Address</span><span class="value">${email}</span></div>
-            <div class="field"><span class="label">📞 Phone Number</span><span class="value">${phone || 'Not provided'}</span></div>
-            <div class="field"><span class="label">💼 Service Interested In</span><span class="value">${service || 'Not specified'}</span></div>
-            <div class="field"><span class="label">💬 Message</span><div class="value">${message || 'No message provided'}</div></div>
-            <div class="field"><span class="label">⏰ Submitted At</span><span class="value">${dateIST} (IST)</span></div>
+            <div class="field"><span class="label">👤 Name:</span> ${name}</div>
+            <div class="field"><span class="label">📧 Email:</span> ${email}</div>
+            <div class="field"><span class="label">📞 Phone:</span> ${phone || 'Not provided'}</div>
+            <div class="field"><span class="label">💼 Service:</span> ${service || 'Not specified'}</div>
+            <div class="field"><span class="label">💬 Message:</span> ${message || 'No message provided'}</div>
+            <div class="field"><span class="label">⏰ Submitted At:</span> ${dateIST} (IST)</div>
           </div>
-          
+
           <div class="footer">
-            <p><strong>ALTABB WEALTH</strong></p>
-            <p>Website: www.altabb.com | Email: hi@altabb.com | Phone: +91 8505804836</p>
+            ALTABB WEALTH • www.altabb.com • hi@altabb.com • +91 8505804836
           </div>
 
         </body>
@@ -264,46 +261,37 @@ export async function POST(request) {
         <html>
         <head>
           <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
+            body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; }
             .header { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 25px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f8fafc; padding: 25px; border-radius: 0 0 10px 10px; border: 1px solid #e2e8f0; }
-            .footer { margin-top: 25px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; font-size: 12px; }
-            .thank-you { text-align: center; font-size: 18px; color: #059669; margin-bottom: 20px; }
-            .next-steps { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #10b981; }
+            .content { background: #f8fafc; padding: 25px; border: 1px solid #e2e8f0; border-radius: 0 0 10px 10px; }
+            .footer { text-align: center; color: #666; font-size: 12px; margin-top: 25px; }
           </style>
         </head>
         <body>
-          
-          <div class="header">
-            <h1 style="margin: 0;">ALTABB WEALTH</h1>
-            <p style="margin: 5px 0 0 0;">Building Wealth, Creating Legacy</p>
-          </div>
-          
-          <div class="content">
-            <div class="thank-you">
-              <h2>Thank You, ${name}!</h2>
-              <p>We have received your consultation request and will get back to you within 24 hours.</p>
-            </div>
-            
-            <div class="next-steps">
-              <h3 style="color: #059669;">What Happens Next?</h3>
-              <ul>
-                <li>Our financial expert will review your requirements</li>
-                <li>We’ll contact you to schedule a free consultation</li>
-                <li>We will prepare a customized financial plan</li>
-              </ul>
-            </div>
 
-            <div style="text-align:center; margin:20px 0;">
-              <p><strong>Need help sooner?</strong></p>
-              <p>📞 +91 8505804836<br>📧 hi@altabb.com</p>
-            </div>
+          <div class="header">
+            <h1>ALTABB WEALTH</h1>
+            <p>Building Wealth, Creating Legacy</p>
+          </div>
+
+          <div class="content">
+            <h2>Thank You, ${name}!</h2>
+            <p>We have received your consultation request.</p>
+
+            <h3>What Happens Next?</h3>
+            <ul>
+              <li>Our financial expert will review your details.</li>
+              <li>We will contact you to schedule a free consultation.</li>
+              <li>A personalized financial roadmap will be prepared for you.</li>
+            </ul>
+
+            <p><strong>Need help sooner?</strong><br>
+            📞 +91 8505804836<br>
+            📧 hi@altabb.com</p>
           </div>
 
           <div class="footer">
-            <p><strong>ALTABB WEALTH Private Limited</strong></p>
-            <p>5204, ATS Rhapsody, Sector 1, Greater Noida, UP 201306</p>
-            <p>www.altabb.com</p>
+            ALTABB WEALTH Private Limited • www.altabb.com
           </div>
 
         </body>
@@ -320,9 +308,9 @@ export async function POST(request) {
     );
 
   } catch (error) {
-    console.error('❌ Error sending emails via Resend:', error);
+    console.error('❌ Error:', error);
     return NextResponse.json(
-      { error: 'Failed to send emails. Please try again.' },
+      { error: 'Failed to send email. Please try again.' },
       { status: 500 }
     );
   }
