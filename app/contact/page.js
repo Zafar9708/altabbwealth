@@ -1,5 +1,6 @@
 
 
+
 // "use client"
 // import React, { useState } from 'react';
 
@@ -13,6 +14,8 @@
 //     service: '',
 //     message: ''
 //   });
+
+//   const [showConsultationForm, setShowConsultationForm] = useState(false);
 
 //   const services = [
 //     "Accounting & Bookkeeping",
@@ -35,10 +38,153 @@
 //     // Handle form submission here
 //     console.log('Form submitted:', formData);
 //     alert('Thank you for your message! We will contact you soon.');
+//     setFormData({
+//       firstName: '',
+//       lastName: '',
+//       email: '',
+//       phone: '',
+//       company: '',
+//       service: '',
+//       message: ''
+//     });
+//     setShowConsultationForm(false);
+//   };
+
+//   const handleCallClick = () => {
+//     window.location.href = 'tel:+918505804836';
+//   };
+
+//   const openConsultationForm = () => {
+//     setShowConsultationForm(true);
+//   };
+
+//   const closeConsultationForm = () => {
+//     setShowConsultationForm(false);
 //   };
 
 //   return (
 //     <div className="min-h-screen bg-white">
+//       {/* Consultation Form Popup */}
+//       {showConsultationForm && (
+//         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+//           <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+//             <div className="p-6">
+//               <div className="flex justify-between items-center mb-6">
+//                 <h3 className="text-2xl font-bold text-[#14274E]">Book Free Consultation</h3>
+//                 <button
+//                   onClick={closeConsultationForm}
+//                   className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+//                 >
+//                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+//                   </svg>
+//                 </button>
+//               </div>
+              
+//               <form onSubmit={handleSubmit} className="space-y-4">
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     First Name *
+//                   </label>
+//                   <input
+//                     type="text"
+//                     name="firstName"
+//                     value={formData.firstName}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+//                     placeholder="John"
+//                   />
+//                 </div>
+                
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     Last Name *
+//                   </label>
+//                   <input
+//                     type="text"
+//                     name="lastName"
+//                     value={formData.lastName}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+//                     placeholder="Doe"
+//                   />
+//                 </div>
+
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     Email Address *
+//                   </label>
+//                   <input
+//                     type="email"
+//                     name="email"
+//                     value={formData.email}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+//                     placeholder="john.doe@example.com"
+//                   />
+//                 </div>
+
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     Phone Number *
+//                   </label>
+//                   <input
+//                     type="tel"
+//                     name="phone"
+//                     value={formData.phone}
+//                     onChange={handleChange}
+//                     required
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+//                     placeholder="+91 8505804836"
+//                   />
+//                 </div>
+
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     Service Interested In
+//                   </label>
+//                   <select
+//                     name="service"
+//                     value={formData.service}
+//                     onChange={handleChange}
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 text-[#14274E]"
+//                   >
+//                     <option value="">Select a service</option>
+//                     {services.map((service, index) => (
+//                       <option key={index} value={service}>{service}</option>
+//                     ))}
+//                   </select>
+//                 </div>
+
+//                 <div>
+//                   <label className="block text-sm font-medium text-[#14274E] mb-2">
+//                     Message
+//                   </label>
+//                   <textarea
+//                     name="message"
+//                     value={formData.message}
+//                     onChange={handleChange}
+//                     rows="3"
+//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+//                     placeholder="Briefly describe what you'd like to discuss..."
+//                   ></textarea>
+//                 </div>
+
+//                 <button
+//                   type="submit"
+//                   className="w-full bg-[#C6A04A] text-white py-4 rounded-lg font-semibold hover:bg-[#14274E] transition-all duration-300 transform hover:scale-105"
+//                 >
+//                   Book Consultation
+//                 </button>
+//               </form>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+
 //       {/* Hero Section */}
 //       <section className="pt-32 pb-20 bg-white">
 //         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -321,17 +467,23 @@
 //       {/* Final CTA */}
 //       <section className="py-20 bg-brand-background">
 //         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-//           <h2 className="text-4xl font-bold text-[#C6A04A] mb-6">
+//           <h2 className="text-4xl font-bold text-[#14274E] mb-6">
 //             Ready to Optimize Your <span className="text-[#C6A04A]">Financial Operations</span>?
 //           </h2>
-//           <p className="text-xl text-[#C6A04A] mb-8 max-w-2xl mx-auto">
+//           <p className="text-xl text-[#14274E] mb-8 max-w-2xl mx-auto">
 //             Let us handle your finances while you focus on growing your business. Get started with a free consultation today.
 //           </p>
 //           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//             <button className="bg-[#C6A04A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#14274E] transition-all duration-300 transform hover:scale-105">
+//             <button 
+//               onClick={openConsultationForm}
+//               className="bg-[#C6A04A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#14274E] transition-all duration-300 transform hover:scale-105"
+//             >
 //               Book Free Consultation
 //             </button>
-//             <button className="border-2 border-white text-gray-950 px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#14274E] transition-all duration-300">
+//             <button 
+//               onClick={handleCallClick}
+//               className="border-2 border-[#14274E] text-[#14274E] px-8 py-4 rounded-lg font-semibold hover:bg-[#14274E] hover:text-white transition-all duration-300"
+//             >
 //               Call +91 8505804836
 //             </button>
 //           </div>
@@ -359,6 +511,8 @@ const ContactPage = () => {
   });
 
   const [showConsultationForm, setShowConsultationForm] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const services = [
     "Accounting & Bookkeeping",
@@ -376,21 +530,79 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // Function to send email notification
+  const sendEmailNotification = async (formData, source = 'contact_page') => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+          source: source
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        console.log('✅ Email notification sent successfully');
+        return true;
+      } else {
+        throw new Error(result.error || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('❌ Error sending email notification:', error);
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will contact you soon.');
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
-    setShowConsultationForm(false);
+    setIsSubmitting(true);
+
+    try {
+      // Send email notification
+      const emailSent = await sendEmailNotification(formData, 'contact_page');
+      
+      if (emailSent) {
+        setShowSuccess(true);
+        console.log('Form submitted successfully:', formData);
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+
+        // Auto hide success message after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 5000);
+      } else {
+        alert('Thank you for your message! We will contact you soon. (Note: Email notification failed)');
+      }
+      
+      if (showConsultationForm) {
+        setShowConsultationForm(false);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Sorry, there was an error submitting your form. Please try again or contact us directly at hi@altabb.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCallClick = () => {
@@ -407,6 +619,23 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Success Message */}
+      {showSuccess && (
+        <div className="fixed top-4 right-4 z-50 bg-green-50 border border-green-200 rounded-lg p-4 shadow-lg max-w-sm">
+          <div className="flex items-center">
+            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+              <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <div className="text-green-800 font-semibold">Thank You!</div>
+              <div className="text-green-700 text-sm">We've received your message and sent a confirmation email.</div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Consultation Form Popup */}
       {showConsultationForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -417,6 +646,7 @@ const ContactPage = () => {
                 <button
                   onClick={closeConsultationForm}
                   className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                  disabled={isSubmitting}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -435,7 +665,8 @@ const ContactPage = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="John"
                   />
                 </div>
@@ -450,7 +681,8 @@ const ContactPage = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="Doe"
                   />
                 </div>
@@ -465,7 +697,8 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="john.doe@example.com"
                   />
                 </div>
@@ -480,7 +713,8 @@ const ContactPage = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="+91 8505804836"
                   />
                 </div>
@@ -493,7 +727,8 @@ const ContactPage = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 text-[#14274E]"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 text-[#14274E] disabled:bg-gray-100 disabled:cursor-not-allowed"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
@@ -511,16 +746,28 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="3"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="Briefly describe what you'd like to discuss..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#C6A04A] text-white py-4 rounded-lg font-semibold hover:bg-[#14274E] transition-all duration-300 transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#C6A04A] text-white py-4 rounded-lg font-semibold hover:bg-[#14274E] transition-all duration-300 transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                 >
-                  Book Consultation
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    'Book Consultation'
+                  )}
                 </button>
               </form>
             </div>
@@ -663,7 +910,8 @@ const ContactPage = () => {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="John"
                       />
                     </div>
@@ -677,7 +925,8 @@ const ContactPage = () => {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="Doe"
                       />
                     </div>
@@ -694,7 +943,8 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="john.doe@example.com"
                       />
                     </div>
@@ -707,7 +957,8 @@ const ContactPage = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="+1 (555) 000-0000"
                       />
                     </div>
@@ -723,7 +974,8 @@ const ContactPage = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="Your company name"
                       />
                     </div>
@@ -735,7 +987,8 @@ const ContactPage = () => {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 text-[#14274E]"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 text-[#14274E] disabled:bg-gray-100 disabled:cursor-not-allowed"
                       >
                         <option value="">Select a service</option>
                         {services.map((service, index) => (
@@ -755,16 +1008,28 @@ const ContactPage = () => {
                       onChange={handleChange}
                       required
                       rows="6"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#C6A04A] focus:ring-2 focus:ring-[#C6A04A]/20 transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                       placeholder="Tell us about your financial needs and how we can help your business grow..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-[#C6A04A] text-white py-4 rounded-lg font-semibold hover:bg-[#14274E] transition-all duration-300 transform hover:scale-105"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#C6A04A] text-white py-4 rounded-lg font-semibold hover:bg-[#14274E] transition-all duration-300 transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
                   </button>
                 </form>
               </div>
