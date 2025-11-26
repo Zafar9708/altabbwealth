@@ -134,7 +134,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Centered Navigation - Desktop */}
-                        <div className="hidden lg:flex items-center space-x-12">
+                        <div className="hidden lg:flex items-center space-x-10">
                             <a href="/" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
                                 Home
                             </a>
@@ -149,7 +149,7 @@ const Navbar = () => {
                                 onMouseEnter={handleServicesMouseEnter}
                                 onMouseLeave={handleServicesMouseLeave}
                             >
-                                <button className="flex items-center space-x-2 text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
+                                <button className="flex items-center  text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
                                     <span>Services</span>
                                     <svg 
                                         className={`w-4 h-4 transition-transform duration-200 ${servicesHover ? 'rotate-180' : ''}`}
@@ -162,10 +162,20 @@ const Navbar = () => {
                                 </button>
                             </div>
 
-                            <a href="/insights" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
+                         <a href="/insights" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
                                 Insights
+                            </a> 
+                           
+
+                              <a href="/partner" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
+                                Partner
                             </a>
-                            <a href="/contact" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
+
+                             <a href="/careers" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
+                                Career
+                            </a>
+
+                             <a href="/contact" className="text-brand-text hover:text-brand-gold font-medium transition-colors duration-200 py-2">
                                 Contact
                             </a>
                         </div>
@@ -174,7 +184,7 @@ const Navbar = () => {
                         <div className="hidden lg:flex items-center space-x-6">
                             {/* CTA Button */}
                             <a href="/get-started">
-                                <button className="bg-brand-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-brand-gold">
+                                <button className="bg-brand-gold text-white px-2 py-3 rounded-lg font-semibold hover:bg-brand-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-brand-gold">
                                    Get Expert Advice
                                 </button>
                             </a>
@@ -311,12 +321,24 @@ const Navbar = () => {
                                 </div>
 
                                 <a
-                                    href="/insights"
+                                    href="/partner"
                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
                                     onClick={closeMobileMenu}
                                 >
-                                    Insights
+                                    Partner
                                 </a>
+
+                                
+                                <a
+                                    href="/careers"
+                                    className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
+                                    onClick={closeMobileMenu}
+                                >
+                                    Career
+                                </a>
+
+                                
+                               
                                 <a
                                     href="/contact"
                                     className="block py-4 text-brand-text font-semibold text-xl border-b border-gray-100 hover:text-brand-gold transition-colors duration-200"
