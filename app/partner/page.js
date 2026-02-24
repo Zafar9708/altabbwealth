@@ -73,7 +73,7 @@ const PartnersPage = () => {
       <div className="bg-white border-b border-brand-gold/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <div className="bg-brand-background rounded-lg p-1 border border-brand-gold/20">
+            <div className="bg-gray-300 rounded-lg p-1 border border-brand-gold/20">
               {['become-partner', 'find-partner'].map((tab) => (
                 <button
                   key={tab}
@@ -81,7 +81,7 @@ const PartnersPage = () => {
                   className={`px-8 py-3 rounded-md font-semibold text-sm transition-all duration-300 ${
                     activeTab === tab
                       ? 'bg-brand-text text-white'
-                      : 'text-brand-text hover:text-brand-gold'
+                      : 'text-brand-text '
                   }`}
                 >
                   {tab === 'become-partner' ? 'Become a Partner' : 'Find a Partner'}

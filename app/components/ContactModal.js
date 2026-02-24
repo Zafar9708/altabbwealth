@@ -339,17 +339,17 @@ const ContactModal = ({ isOpen, onClose }) => {
             <div className="max-h-[90vh] w-full max-w-md mx-auto overflow-y-auto">
                 <div 
                     ref={modalRef}
-                    className="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full mx-auto transform transition-all duration-300 scale-100 border border-yellow-200"
+                    className="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full mx-auto transform transition-all duration-300 scale-100 border border-[#8BC53F]"
                 >
                     {/* Header with close button */}
-                    <div className="flex justify-between items-center p-4 sm:p-6 border-b border-yellow-100 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-t-xl sm:rounded-t-2xl">
+                    <div className="flex justify-between items-center p-4 sm:p-6 border-b border-yellow-100 bg-[#8BC53F] rounded-t-xl sm:rounded-t-2xl">
                         <h2 className="text-lg ml-20 sm:text-2xl font-bold text-gray-800">
                             Start Your Journey
                         </h2>
                         <button
                             onClick={onClose}
                             disabled={isLoading}
-                            className="text-gray-500 hover:text-yellow-700 transition-colors duration-200 p-1 sm:p-2 rounded-full hover:bg-yellow-100 flex-shrink-0"
+                            className="text-gray-500 hover:text-[#8BC53F] transition-colors duration-200 p-1 sm:p-2 rounded-full hover:bg-gray-100 flex-shrink-0"
                         >
                             <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -374,9 +374,9 @@ const ContactModal = ({ isOpen, onClose }) => {
                         
                         {/* Tagline */}
                         <div className="space-y-2">
-                            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-700">
+                            {/* <h3 className="text-2xl sm:text-3xl font-bold text-yellow-700">
                                 cmdfin
-                            </h3>
+                            </h3> */}
                             <p className="text-sm sm:text-base text-gray-600 font-medium italic">
                                 Building Wealth, Creating Legacy.
                             </p>
@@ -482,7 +482,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full bg-gradient-to-r from-yellow-600 to-amber-600 text-white py-4 rounded-lg font-bold text-sm sm:text-base hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] mt-2 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-lg flex items-center justify-center"
+                            className="w-full bg-[#8BC53F] text-white py-4 rounded-lg font-bold text-sm sm:text-base hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] mt-2 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-lg flex items-center justify-center"
                         >
                             {isLoading ? (
                                 <>

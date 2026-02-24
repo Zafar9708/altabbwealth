@@ -797,7 +797,7 @@ const ConsultationForm = ({ isOpen, onClose, formType }) => {
                 type="submit"
                 disabled={isSubmitting}
                 className="flex-1 px-6 py-3 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
-                style={{ backgroundColor: isSubmitting ? '#9CA3AF' : '#C6A04A' }}
+                style={{ backgroundColor: isSubmitting ? '#8BC53F' : '#8BC53F' }}
               >
                 {isSubmitting ? (
                   <>

@@ -16,11 +16,8 @@ const LoadingScreen = () => {
                     />
                 </div>
                 
-                {/* Text */}
-                <h1 className="text-4xl font-bold text-[#8BC53F] mb-4">
-                    cmdfin
-                </h1>
-                <p className="text-xl text-gray-600">
+             
+                <p className="text-xl -mt-6 text-gray-600">
                     Building Wealth, Creating Legacy.
                 </p>
             </div>

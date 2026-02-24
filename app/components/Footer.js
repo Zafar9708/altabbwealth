@@ -27,8 +27,8 @@ const Footer = () => {
   const contactInfo = {
     address: "5204, ATS Rhapsody, Sector-1, Greater Noida, UP, 201306, India",
     phone: "+91 8505804836",
-    email: "hi@altabb.com",
-    website: "www.altabb.com"
+    email: "hi@cmdfin.com",
+    website: "www.cmdfin.com"
   };
 
   const certifications = [
@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 bg-brand-gold rounded-lg flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-lg">AW</span>
+                  <span className="text-white font-bold text-lg">cf</span>
                 </div>
                 <div>
                   <span className="text-xl font-bold block">cmdfin</span>

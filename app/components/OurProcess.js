@@ -48,9 +48,9 @@ const OurProcess = () => {
             <div className="w-16 h-1 bg-brand-gold ml-4"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-text mb-6">
-            Structured Path to <span className="text-brand-gold">Business Excellence</span>
+            Structured Path to <span className="text-gray-100">Business Excellence</span>
           </h2>
-          <p className="text-xl text-brand-text/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Our systematic approach ensures every aspect of your financial operations is meticulously analyzed, 
             optimized, and maintained for sustainable business growth and compliance.
           </p>
