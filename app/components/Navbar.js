@@ -115,8 +115,8 @@ const Navbar = () => {
     return (
         <>
             <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                    ? 'bg-brand-background/95 backdrop-blur-md shadow-lg border-b border-brand-gold/20'
-                    : 'bg-brand-background border-b border-brand-gold/10'
+                    ? 'bg-white'
+                    : 'bg-white'
                 }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
@@ -125,7 +125,7 @@ const Navbar = () => {
                             <Link href="/" className="flex items-center justify-center">
                                 <img
                                     src="/Logo.png"
-                                    alt="ALTABB Wealth Logo"
+                                    alt="cmdfin Logo"
                                     width={80}
                                     height={80}
                                     className="object-contain"

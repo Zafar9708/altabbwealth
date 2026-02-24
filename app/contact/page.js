@@ -229,7 +229,7 @@
 //                     </div>
 //                     <div>
 //                       <h3 className="font-semibold text-[#14274E] mb-1">Head Office</h3>
-//                       <p className="text-[#14274E]/70">Altabb Wealth Private Limited</p>
+//                       <p className="text-[#14274E]/70">cmdfin Private Limited</p>
 //                       <p className="text-[#14274E]/70 text-sm">5204, ATS Rhapsody, Sector-1</p>
 //                       <p className="text-[#14274E]/70 text-sm">Greater Noida, UP, 201306, India</p>
 //                     </div>
@@ -819,7 +819,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#14274E] mb-1">Head Office</h3>
-                      <p className="text-[#14274E]/70">Altabb Wealth Private Limited</p>
+                      <p className="text-[#14274E]/70">cmdfin Private Limited</p>
                       <p className="text-[#14274E]/70 text-sm">5204, ATS Rhapsody, Sector-1</p>
                       <p className="text-[#14274E]/70 text-sm">Greater Noida, UP, 201306, India</p>
                     </div>

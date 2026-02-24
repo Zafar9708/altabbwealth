@@ -63,7 +63,7 @@
                   
 //                   <div className="space-y-6">
 //                     <p className="text-lg text-brand-text/90 leading-relaxed italic border-l-4 border-brand-gold/30 pl-4 py-2">
-//                       "At Altabb Wealth, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
+//                       "At cmdfin, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
 //                     </p>
                     
 //                     {/* Mission Pillars */}
@@ -261,7 +261,7 @@ const MissionVision = () => {
                   
                   <div className="space-y-6">
                     <p className="text-lg text-brand-text/90 leading-relaxed italic border-l-4 border-brand-gold/30 pl-4 py-2">
-                      "At Altabb Wealth, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
+                      "At cmdfin, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
                     </p>
                     
                     {/* Mission Pillars */}

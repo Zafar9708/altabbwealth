@@ -102,7 +102,7 @@ const PartnersPage = () => {
             <section className="text-center">
               <h2 className="text-3xl font-bold text-brand-text mb-6">Our Mission</h2>
               <p className="text-lg text-brand-text/80 mb-8 max-w-4xl mx-auto italic">
-                "At Altabb Wealth, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
+                "At cmdfin, our mission is to provide intelligent, transparent, and growth-driven financial solutions that empower clients to build wealth, secure their future, and create enduring legacies."
               </p>
             </section>
 
@@ -215,7 +215,7 @@ const PartnersPage = () => {
             <section className="text-center">
               <h2 className="text-3xl font-bold text-brand-text mb-6">Your Trusted Partner in Financial Excellence</h2>
               <p className="text-lg text-brand-text/80 mb-8 max-w-4xl mx-auto">
-                We Manage Your Numbers So You Can Focus on Growth. At Altabb Wealth, we provide a complete range of financial services designed to give businesses clarity, confidence, and control over their finances.
+                We Manage Your Numbers So You Can Focus on Growth. At cmdfin, we provide a complete range of financial services designed to give businesses clarity, confidence, and control over their finances.
               </p>
             </section>
 
@@ -253,7 +253,7 @@ const PartnersPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl p-6 border border-brand-gold/20">
                   <p className="text-brand-text/80 italic mb-4">
-                    "Altabb Wealth transformed our financial operations with their comprehensive accounting and compliance solutions. Their strategic approach helped optimize our tax efficiency while ensuring full regulatory compliance."
+                    "cmdfin transformed our financial operations with their comprehensive accounting and compliance solutions. Their strategic approach helped optimize our tax efficiency while ensuring full regulatory compliance."
                   </p>
                   <div className="font-semibold text-brand-text">Rajesh Kumar, CFO - Tata Consultancy Services</div>
                 </div>

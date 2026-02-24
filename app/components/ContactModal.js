@@ -68,7 +68,7 @@
 //                             <div className="w-20 h-20 sm:w-24 sm:h-24   flex items-center justify-center ">
 //                                 <img
 //                                     src="/Logo.png"
-//                                     alt="ALTABB Wealth Logo"
+//                                     alt="cmdfin Logo"
 //                                     width={80}
 //                                     height={80}
 //                                     className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -79,7 +79,7 @@
 //                         {/* Tagline */}
 //                         <div className="space-y-2">
 //                             <h3 className="text-2xl sm:text-3xl font-bold text-yellow-700">
-//                                 ALTABB WEALTH
+//                                 cmdfin
 //                             </h3>
 //                             <p className="text-sm sm:text-base text-gray-600 font-medium italic">
 //                                 Building Wealth, Creating Legacy.
@@ -364,7 +364,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                             <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
                                 <img
                                     src="/Logo.png"
-                                    alt="ALTABB Wealth Logo"
+                                    alt="cmdfin Logo"
                                     width={80}
                                     height={80}
                                     className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -375,7 +375,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         {/* Tagline */}
                         <div className="space-y-2">
                             <h3 className="text-2xl sm:text-3xl font-bold text-yellow-700">
-                                ALTABB WEALTH
+                                cmdfin
                             </h3>
                             <p className="text-sm sm:text-base text-gray-600 font-medium italic">
                                 Building Wealth, Creating Legacy.

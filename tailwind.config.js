@@ -9,9 +9,9 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          background: '#FAF1E6', // light cream background
+          background: '#8BC53F', // light cream background
           text: '#14274E',       // deep navy text
-          gold: '#C6A04A',       // infinity logo gold
+          gold: '#8BC53F',       // infinity logo gold
         },
       },
     },

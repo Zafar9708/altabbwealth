@@ -28,7 +28,7 @@
 //             setMessages([
 //                 {
 //                     id: 1,
-//                     text: "Hello! Welcome to ALTABB Wealth. I'm here to help you with your financial journey. How can I assist you today?",
+//                     text: "Hello! Welcome to cmdfin. I'm here to help you with your financial journey. How can I assist you today?",
 //                     sender: 'bot',
 //                     timestamp: new Date()
 //                 }
@@ -138,14 +138,14 @@
 //                                 <div className="w-10 h-10  flex items-center justify-center">
 //                                     <img
 //                                         src="/Logo.png"
-//                                         alt="ALTABB Wealth"
+//                                         alt="cmdfin"
 //                                         className="w-8 h-8 object-contain"
 //                                     />
 //                                 </div>
                                 
 //                             </div>
 //                             <div>
-//                                 <h3 className="font-bold text-sm">ALTABB Wealth</h3>
+//                                 <h3 className="font-bold text-sm">cmdfin</h3>
 //                                 <div className="flex items-center space-x-1">
 //                                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
 //                                     <span className="text-xs text-green-100">Online</span>
@@ -361,7 +361,7 @@ const ChatWidget = () => {
             setMessages([
                 {
                     id: 1,
-                    text: "Hello! Welcome to ALTABB Wealth. I'm here to help you with your financial journey. How can I assist you today?",
+                    text: "Hello! Welcome to cmdfin. I'm here to help you with your financial journey. How can I assist you today?",
                     sender: 'bot',
                     timestamp: new Date()
                 }
@@ -506,13 +506,13 @@ const ChatWidget = () => {
                 <div className="fixed bottom-6 right-6 z-40">
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="bg-yellow-600 hover:bg-yellow-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 group"
+                        className="bg-[#8BC53F] hover:bg-yellow-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 group"
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                         <div className="absolute -top-1 -right-1">
-                            <div className="w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                            <div className="w-3 h-3 bg-[#8BC53F] rounded-full border-2 border-white animate-pulse"></div>
                         </div>
                     </button>
                     <div className="absolute bottom-16 right-0 bg-gray-900 text-white text-xs py-1 px-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -524,20 +524,20 @@ const ChatWidget = () => {
             {isOpen && (
                 <div className="fixed bottom-6 right-6 z-40 w-80 sm:w-96 h-96 bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-yellow-600 to-amber-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
+                    <div className="bg-[#8BC53F] text-white p-4 rounded-t-2xl flex items-center justify-between">
                         <div className="flex items-center space-x-3">
                             <div className="relative">
                                 <div className="w-10 h-10  flex items-center justify-center">
                                     <img
                                         src="/Logo.png"
-                                        alt="ALTABB Wealth"
+                                        alt="cmdfin"
                                         className="w-8 h-8 object-contain"
                                     />
                                 </div>
                                 
                             </div>
                             <div>
-                                <h3 className="font-bold text-sm">ALTABB Wealth</h3>
+                                <h3 className="font-bold text-sm">cmdfin</h3>
                                 <div className="flex items-center space-x-1">
                                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                                     <span className="text-xs text-green-100">Online</span>

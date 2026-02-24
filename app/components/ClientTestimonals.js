@@ -10,7 +10,7 @@ const ClientTestimonials = () => {
       position: "CFO",
       company: "Tata Consultancy Services",
       location: "Mumbai, India",
-      content: "Altabb Wealth transformed our financial operations with their comprehensive accounting and compliance solutions. Their strategic approach helped optimize our tax efficiency while ensuring full regulatory compliance across all our operations.",
+      content: "cmdfin transformed our financial operations with their comprehensive accounting and compliance solutions. Their strategic approach helped optimize our tax efficiency while ensuring full regulatory compliance across all our operations.",
       rating: 5,
       image: "/testimonials/client-1.jpg",
       years: "Client for 4 years"
@@ -100,7 +100,7 @@ const ClientTestimonials = () => {
             Trusted by <span className="text-brand-gold">Global Businesses</span>
           </h2>
           <p className="text-xl text-brand-text/70 max-w-3xl mx-auto leading-relaxed">
-            Discover why leading companies across India, USA, and UAE choose Altabb Wealth 
+            Discover why leading companies across India, USA, and UAE choose cmdfin 
             as their trusted partner for comprehensive financial solutions and business growth.
           </p>
         </div>

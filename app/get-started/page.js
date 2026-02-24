@@ -76,7 +76,7 @@
 //                         <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-yellow-200">
 //                             <img
 //                                 src="/Logo.png"
-//                                 alt="ALTABB Wealth Logo"
+//                                 alt="cmdfin Logo"
 //                                 className="w-16 h-16 object-contain"
 //                             />
 //                         </div>
@@ -490,7 +490,7 @@ const GetStartedPage = () => {
                         <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-yellow-200">
                             <img
                                 src="/Logo.png"
-                                alt="ALTABB Wealth Logo"
+                                alt="cmdfin Logo"
                                 className="w-16 h-16 object-contain"
                             />
                         </div>

@@ -9,7 +9,7 @@ const LoadingScreen = () => {
                 <div className="w-32 h-32 mx-auto mb-6">
                     <img
                         src="/Logo.png"
-                        alt="ALTABB Wealth Logo"
+                        alt="cmdfin Logo"
                         width={128}
                         height={128}
                         className="object-contain animate-pulse"
@@ -17,8 +17,8 @@ const LoadingScreen = () => {
                 </div>
                 
                 {/* Text */}
-                <h1 className="text-4xl font-bold text-yellow-600 mb-4">
-                    ALTABB WEALTH
+                <h1 className="text-4xl font-bold text-[#8BC53F] mb-4">
+                    cmdfin
                 </h1>
                 <p className="text-xl text-gray-600">
                     Building Wealth, Creating Legacy.

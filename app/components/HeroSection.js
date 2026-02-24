@@ -116,7 +116,7 @@
 //           <div className="w-24 h-24 rounded-lg flex items-center justify-center">
 //             <img
 //               src="/Logo.png"
-//               alt="ALTABB Wealth Logo"
+//               alt="cmdfin Logo"
 //               width={80}
 //               height={80}
 //               className="object-contain"
@@ -274,7 +274,7 @@
 //     {
 //       title: "The Future of Finance, Today",
 //       subtitle: "From Pay-In to Pay-Out — We've Got You Covered",
-//       description: "At Altabb Wealth, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
+//       description: "At cmdfin, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
 //       cta: "Get Started",
 //       formType: "general",
 //       videoSrc: "/videos/avideo.mp4" // Replace with your video path
@@ -652,7 +652,7 @@ const ConsultationForm = ({ isOpen, onClose, formType }) => {
           <div className="w-24 h-24 rounded-lg flex items-center justify-center">
             <img
               src="/Logo.png"
-              alt="ALTABB Wealth Logo"
+              alt="cmdfin Logo"
               width={80}
               height={80}
               className="object-contain"
@@ -829,7 +829,7 @@ const MinimalistHeroSection = () => {
     {
       title: "The Future of Finance, Today",
       subtitle: "From Pay-In to Pay-Out — We've Got You Covered",
-      description: "At Altabb Wealth, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
+      description: "At cmdfin, we empower businesses with end-to-end financial solutions built on Trust, Integrity, and Automation. We simplify complex financial operations, ensure compliance, and help you achieve sustainable growth — so you can focus on what truly matters: building your business and your legacy.",
       cta: "Get Started",
       formType: "general",
       videoSrc: "/videos/avideo.mp4" // Replace with your video path
@@ -925,7 +925,7 @@ const MinimalistHeroSection = () => {
             {/* Subtitle - Light and Gold */}
             <h2 
               className="text-xl sm:text-2xl lg:text-3xl font-light tracking-widest uppercase"
-              style={{ color: '#C6A04A' }}
+              style={{ color: '#8BC53F' }}
             >
               {slide.subtitle}
             </h2>
@@ -954,7 +954,7 @@ const MinimalistHeroSection = () => {
                 inline-flex items-center justify-center px-10 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform
                 hover:scale-[1.03] hover:shadow-xl
               "
-              style={{ backgroundColor: '#C6A04A', color: 'white', letterSpacing: '0.05em' }}
+              style={{ backgroundColor: '#8BC53F', color: 'white', letterSpacing: '0.05em' }}
             >
               {slide.cta}
             </button>

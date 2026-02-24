@@ -56,7 +56,7 @@ const Footer = () => {
                   <span className="text-white font-bold text-lg">AW</span>
                 </div>
                 <div>
-                  <span className="text-xl font-bold block">Altabb Wealth</span>
+                  <span className="text-xl font-bold block">cmdfin</span>
                   <span className="text-white/70 text-sm">Building Wealth, Creating Legacy</span>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Altabb Wealth Private Limited. All rights reserved.
+              © {currentYear} cmdfin Private Limited. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-white/60 hover:text-brand-gold transition-colors duration-300">

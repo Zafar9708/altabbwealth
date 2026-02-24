@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
- title: 'Altabb Wealth',
+ title: 'cmdfin',
   description: 'Intelligent financial solutions for enduring legacies',
 };
 
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
 // });
 
 // export const metadata = {
-//   title: 'Altabb Wealth',
+//   title: 'cmdfin',
 //   description: 'Intelligent financial solutions for enduring legacies',
 // };
 

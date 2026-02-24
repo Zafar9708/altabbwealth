@@ -81,7 +81,7 @@
 //           <div className="text-center">
 //             <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
 //             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-//               Build your career with Altabb Wealth and help shape the future of financial services 
+//               Build your career with cmdfin and help shape the future of financial services 
 //               while creating lasting impact for our clients.
 //             </p>
 //           </div>
@@ -92,7 +92,7 @@
 //       <section className="py-16">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 //           <div className="text-center mb-12">
-//             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work at Altabb Wealth?</h2>
+//             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work at cmdfin?</h2>
 //             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 //               We're building a culture of excellence, innovation, and client-centric service. 
 //               Join us in our mission to transform financial advisory services.
@@ -232,7 +232,7 @@
 //             <div className="bg-white rounded-lg p-8 shadow-sm">
 //               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Join Us?</h3>
 //               <p className="text-gray-600 mb-6">
-//                 Take the first step toward an exciting career with Altabb Wealth. We're committed to 
+//                 Take the first step toward an exciting career with cmdfin. We're committed to 
 //                 helping you grow professionally while making a meaningful impact in the financial industry.
 //               </p>
 //               <div className="space-y-4">
@@ -363,7 +363,7 @@ export default function CareersPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Build your career with Altabb Wealth and help shape the future of financial services 
+              Build your career with cmdfin and help shape the future of financial services 
               while creating lasting impact for our clients.
             </p>
           </div>
@@ -374,7 +374,7 @@ export default function CareersPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work at Altabb Wealth?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work at cmdfin?</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We're building a culture of excellence, innovation, and client-centric service. 
               Join us in our mission to transform financial advisory services.
@@ -531,7 +531,7 @@ export default function CareersPage() {
             <div className="bg-white rounded-lg p-8 shadow-sm">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Join Us?</h3>
               <p className="text-gray-600 mb-6">
-                Take the first step toward an exciting career with Altabb Wealth. We're committed to 
+                Take the first step toward an exciting career with cmdfin. We're committed to 
                 helping you grow professionally while making a meaningful impact in the financial industry.
               </p>
               <div className="space-y-4">

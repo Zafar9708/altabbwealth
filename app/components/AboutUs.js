@@ -28,7 +28,7 @@ const AboutUs = () => {
               style={{ color: '#14274E' }}>
             About Us
           </h1>
-          <div className="w-32 h-1.5 bg-brand-gold mx-auto mb-8 rounded-full"></div>
+          <div className="w-32 h-1.5 bg-[#8BC53F] mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Your trusted partner in financial excellence and business growth
           </p>
@@ -46,11 +46,11 @@ const AboutUs = () => {
             {/* Body Text */}
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-gray-700 bg-white p-6 rounded-2xl shadow-sm border-l-4" style={{ borderLeftColor: '#C6A04A' }}>
-                At Altabb Wealth, we provide a complete range of financial services designed to give businesses clarity, confidence, and control over their finances.
+                At cmdfin, we provide a complete range of financial services designed to give businesses clarity, confidence, and control over their finances.
               </p>
               
               <p className="text-lg leading-relaxed text-gray-700 bg-white p-6 rounded-2xl shadow-sm border-l-4" style={{ borderLeftColor: '#C6A04A' }}>
-                Rooted in <strong style={{ color: '#C6A04A' }}>Trust</strong> and <strong style={{ color: '#C6A04A' }}>Integrity</strong>, we combine deep financial expertise with cutting-edge automation tools. From daily bookkeeping to taxation, payroll, audits, and strategic advisory — we manage your entire financial ecosystem with precision, professionalism, and care.
+                Rooted in <strong style={{ color: '#8BC53F' }}>Trust</strong> and <strong style={{ color: '#8BC53F' }}>Integrity</strong>, we combine deep financial expertise with cutting-edge automation tools. From daily bookkeeping to taxation, payroll, audits, and strategic advisory — we manage your entire financial ecosystem with precision, professionalism, and care.
               </p>
             </div>
 
@@ -59,7 +59,7 @@ const AboutUs = () => {
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg"
-                style={{ backgroundColor: '#C6A04A', color: 'white' }}
+                style={{ backgroundColor: '#8BC53F', color: 'white' }}
                 data-aos="fade-right"
                 data-aos-delay="200"
               >
@@ -92,7 +92,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <div className="text-4xl font-bold mb-3" style={{ color: '#C6A04A' }}>100+</div>
+                <div className="text-4xl font-bold mb-3" style={{ color: '#8BC53F' }}>100+</div>
                 <div className="text-lg font-semibold" style={{ color: '#14274E' }}>Clients Served</div>
                 <div className="w-12 h-0.5 bg-brand-gold mx-auto mt-3 rounded-full"></div>
               </div>
@@ -101,7 +101,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="110"
               >
-                <div className="text-4xl font-bold mb-3" style={{ color: '#C6A04A' }}>10+</div>
+                <div className="text-4xl font-bold mb-3" style={{ color: '#8BC53F' }}>10+</div>
                 <div className="text-lg font-semibold" style={{ color: '#14274E' }}>Years Experience</div>
                 <div className="w-12 h-0.5 bg-brand-gold mx-auto mt-3 rounded-full"></div>
               </div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <div className="text-4xl font-bold mb-3" style={{ color: '#C6A04A' }}>24/7</div>
+                <div className="text-4xl font-bold mb-3" style={{ color: '#8BC53F' }}>24/7</div>
                 <div className="text-lg font-semibold" style={{ color: '#14274E' }}>Support</div>
                 <div className="w-12 h-0.5 bg-brand-gold mx-auto mt-3 rounded-full"></div>
               </div>
@@ -119,9 +119,9 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="210"
               >
-                <div className="text-4xl font-bold mb-3" style={{ color: '#C6A04A' }}>99%</div>
+                <div className="text-4xl font-bold mb-3" style={{ color: '#8BC53F' }}>99%</div>
                 <div className="text-lg font-semibold" style={{ color: '#14274E' }}>Satisfaction</div>
-                <div className="w-12 h-0.5 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+                <div className="w-12 h-0.5 bg-[#8BC53F] mx-auto mt-3 rounded-full"></div>
               </div>
             </div>
 
@@ -133,10 +133,10 @@ const AboutUs = () => {
                 data-aos-delay="100"
               >
                 <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center">
-                  <span className="text-2xl" style={{ color: '#C6A04A' }}>✓</span>
+                  <span className="text-2xl" style={{ color: '#8BC53F' }}>✓</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2" style={{ color: '#14274E' }}>Trust & Integrity</h3>
+                  <h3 className="font-bold text-xl mb-2" style={{ color: '#8BC53F' }}>Trust & Integrity</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Building lasting relationships based on transparency and ethical practices
                   </p>
@@ -149,10 +149,10 @@ const AboutUs = () => {
                 data-aos-delay="110"
               >
                 <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center">
-                  <span className="text-2xl" style={{ color: '#C6A04A' }}>⚡</span>
+                  <span className="text-2xl" style={{ color: '#8BC53F' }}>⚡</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2" style={{ color: '#14274E' }}>Cutting-Edge Automation</h3>
+                  <h3 className="font-bold text-xl mb-2" style={{ color: '#8BC53F' }}>Cutting-Edge Automation</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Leveraging technology to deliver efficient, accurate financial solutions
                   </p>
@@ -165,10 +165,10 @@ const AboutUs = () => {
                 data-aos-delay="200"
               >
                 <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center">
-                  <span className="text-2xl" style={{ color: '#C6A04A' }}>🎯</span>
+                  <span className="text-2xl" style={{ color: '#8BC53F' }}>🎯</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2" style={{ color: '#14274E' }}>Comprehensive Solutions</h3>
+                  <h3 className="font-bold text-xl mb-2" style={{ color: '#8BC53F' }}>Comprehensive Solutions</h3>
                   <p className="text-gray-600 leading-relaxed">
                     End-to-end financial services covering all your business needs
                   </p>

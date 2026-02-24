@@ -18,7 +18,7 @@
 //   ];
 
 //   const contactInfo = {
-//     company: "Altabb Wealth Private Limited",
+//     company: "cmdfin Private Limited",
 //     address: "Tower C, Business Bay, Mumbai 400013, India",
 //     phone: "+91 90000 00000",
 //     email: "contact@altabbwealth.com",
@@ -224,7 +224,7 @@ const CountriesWeWorkWith = () => {
   ];
 
   const contactInfo = {
-    company: "Altabb Wealth Private Limited",
+    company: "cmdfin Private Limited",
     address: "5204, ATS Rhapsody, Sector-1, Greater Noida, UP, 201306, India",
     phone: "+91 8505804836",
     email: "hi@altabb.com",
