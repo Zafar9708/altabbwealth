@@ -630,19 +630,19 @@ const CallToAction = () => {
           data-aos-delay="400"
         >
           <div className="text-center text-brand-text">
-            <div className="text-2xl font-bold text-brand-gold mb-2">2h</div>
+            <div className="text-2xl font-bold text-white mb-2">2h</div>
             <div className="text-brand-text/70 text-sm">Response Time</div>
           </div>
           <div className="text-center text-brand-text">
-            <div className="text-2xl font-bold text-brand-gold mb-2">100%</div>
+            <div className="text-2xl font-bold text-white mb-2">100%</div>
             <div className="text-brand-text/70 text-sm">Confidential</div>
           </div>
           <div className="text-center text-brand-text">
-            <div className="text-2xl font-bold text-brand-gold mb-2">$0</div>
+            <div className="text-2xl font-bold text-white mb-2">$0</div>
             <div className="text-brand-text/70 text-sm">Initial Consultation</div>
           </div>
           <div className="text-center text-brand-text">
-            <div className="text-2xl font-bold text-brand-gold mb-2">10+</div>
+            <div className="text-2xl font-bold text-white mb-2">10+</div>
             <div className="text-brand-text/70 text-sm">Years Experience</div>
           </div>
         </div>
