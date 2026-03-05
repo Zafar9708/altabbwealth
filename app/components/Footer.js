@@ -27,7 +27,7 @@ const Footer = () => {
   const contactInfo = {
     address: "5204, ATS Rhapsody, Sector-1, Greater Noida, UP, 201306, India",
     phone: "+91 8505804836",
-    email: "hi@cmdfin.com",
+    email: "arun@cmdfin.com",
     website: "www.cmdfin.com"
   };
 
